@@ -148,9 +148,9 @@ function onClick() {
         Auslastung Maschine 2: ${auslastungMaschine2.toFixed(2)}% <br>
         Auslastung Maschine 3: ${auslastungMaschine3.toFixed(2)}% <br><br>
         Verbrauch Rohstoff Typ 1: ${verbrauchTyp1.toFixed(2)} <br>
-        Neuer Lagerbestand Rohstoff Typ 1: ${neuLagerRohstoffTyp1.toFixed(2)}% <br><br>
+        Neuer Lagerbestand Rohstoff Typ 1: ${neuLagerRohstoffTyp1.toFixed(2)} <br><br>
         Verbrauch Rohstoff Typ 2: ${verbrauchTyp2.toFixed(2)} <br>
-        Neuer Lagerbestand Rohstoff Typ 2: ${neuLagerRohstoffTyp2.toFixed(2)}% <br><br>
+        Neuer Lagerbestand Rohstoff Typ 2: ${neuLagerRohstoffTyp2.toFixed(2)} <br><br>
         Gesamtbedarf Facharbeiter: ${gesamtBedarfFacharbeiter.toFixed(2)} <br>
         Bedarf/Kündigung Facharbeiter: ${personalDispoFacharbeiter.toFixed(2)} <br>
         Gesamtbedarf angelernte MA: ${gesamtBedarfangelernte.toFixed(2)} <br>
