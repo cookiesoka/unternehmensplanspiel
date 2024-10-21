@@ -80,7 +80,6 @@ function onClick() {
     // Gesamt Bedarf Facharbeiter
     var gesamtBedarfFacharbeiter = facharbeiterBedarfDuenger + facharbeiterBedarfKleber + facharbeiterBedarfWaschm;
 
-
     // Angelernte MA je Team:
     var angelernteBedarfDuenger = bedarfTeamDuenger * 8;
     var angelernteBedarfKleber = bedarfTeamDuenger * 11;
@@ -96,18 +95,78 @@ function onClick() {
     var personalDispoFacharbeiter = gesamtBedarfFacharbeiter - angestelleFacharbeiter;
     var personalDispoAngelernte = gesamtBedarfangelernte - angestelleAngelernte
 
+    //Rohstoff Berechnung
+    var lagerRohstoffTyp1 = parseFloat(document.getElementById("rohstoff1").value)
+    var lagerRohstoffTyp2 = parseFloat(document.getElementById("rohstoff2").value)
+
+    var neuLagerRohstoffTyp1 = lagerRohstoffTyp1 - verbrauchTyp1;
+    var neuLagerRohstoffTyp2 = lagerRohstoffTyp2 - verbrauchTyp2;
+    
+    //Transport
+    //Absatz Dünger
+    var absatzChfDuengerAlt = parseFloat(document.getElementById("absatz_duenger_chf").value)
+    var absatzAutDuengerAlt = parseFloat(document.getElementById("absatz_duenger_aut").value)
+    var absatzPoldiDuengerAlt = parseFloat(document.getElementById("absatz_duenger_poldi").value)
+    //Absatz Kleber
+    var absatzChfKleberAlt = parseFloat(document.getElementById("absatz_kleber_chf").value)
+    var absatzAutKleberAlt = parseFloat(document.getElementById("absatz_kleber_aut").value)
+    var absatzPoldiKleberAlt = parseFloat(document.getElementById("absatz_kleber_poldi").value)
+    //Absatz Waschmittel
+    var absatzChfWaschmAlt = parseFloat(document.getElementById("absatz_waschmittel_chf").value)
+    var absatzAutWaschmAlt = parseFloat(document.getElementById("absatz_waschmittel_aut").value)
+    var absatzPoldiWaschmAlt = parseFloat(document.getElementById("absatz_waschmittel_poldi").value)
+    //Lager Dünger
+    var lagerChfDuengerAlt = parseFloat(document.getElementById("chf_duenger").value)
+    var lagerAutDuengerAlt = parseFloat(document.getElementById("aut_duenger").value)
+    var lagerPoldiDuengerAlt = parseFloat(document.getElementById("poldi_duenger").value)
+    //Lager Kleber
+    var lagerChfKleberAlt = parseFloat(document.getElementById("chf_kleber").value)
+    var lagerAutKleberAlt = parseFloat(document.getElementById("aut_kleber").value)
+    var lagerPoldiKleberAlt = parseFloat(document.getElementById("poldi_kleber").value)
+    //Lager Waschmittel
+    var lagerChfWaschmAlt = parseFloat(document.getElementById("chf_waschmittel").value)
+    var lagerAutWaschmAlt = parseFloat(document.getElementById("aut_waschmittel").value)
+    var lagerPoldiWaschmAlt = parseFloat(document.getElementById("poldi_waschmittel").value)
+
+    //Berechnung neuer Regionallagerbestand
+    //Dünger
+    var lagerChfDuengerNeu = lagerChfDuengerAlt - absatzChfDuengerAlt;
+    var lagerAutDuengerNeu = lagerAutDuengerAlt - absatzAutDuengerAlt;
+    var lagerPoldiDuengerNeu = lagerPoldiDuengerAlt - absatzPoldiDuengerAlt;
+    //Kleber
+    var lagerChfKleberNeu = lagerChfKleberAlt - absatzChfKleberAlt;
+    var lagerAutKleberNeu = lagerAutKleberAlt - absatzAutKleberAlt;
+    var lagerPoldiKleberNeu = lagerPoldiKleberAlt - absatzPoldiKleberAlt;
+    //Waschmittel
+    var lagerChfWaschmNeu = lagerChfWaschmAlt - absatzChfWaschmAlt;
+    var lagerAutWaschmNeu = lagerAutWaschmAlt - absatzAutWaschmAlt;
+    var lagerPoldiWaschmNeu = lagerPoldiWaschmAlt - absatzPoldiWaschmAlt;
 
     // Ausgabe der Ergebnisse in die HTML-Datei
     outputEL.innerHTML = `
         Auslastung Maschine 1: ${auslastungMaschine1.toFixed(2)}% <br>
         Auslastung Maschine 2: ${auslastungMaschine2.toFixed(2)}% <br>
-        Auslastung Maschine 3: ${auslastungMaschine3.toFixed(2)}% <br>
+        Auslastung Maschine 3: ${auslastungMaschine3.toFixed(2)}% <br><br>
         Verbrauch Rohstoff Typ 1: ${verbrauchTyp1.toFixed(2)} <br>
+        Neuer Lagerbestand Rohstoff Typ 1: ${neuLagerRohstoffTyp1.toFixed(2)}% <br><br>
         Verbrauch Rohstoff Typ 2: ${verbrauchTyp2.toFixed(2)} <br>
+        Neuer Lagerbestand Rohstoff Typ 2: ${neuLagerRohstoffTyp2.toFixed(2)}% <br><br>
         Gesamtbedarf Facharbeiter: ${gesamtBedarfFacharbeiter.toFixed(2)} <br>
         Bedarf/Kündigung Facharbeiter: ${personalDispoFacharbeiter.toFixed(2)} <br>
         Gesamtbedarf angelernte MA: ${gesamtBedarfangelernte.toFixed(2)} <br>
-        Bedarf/Kündigung angelernte MA: ${personalDispoAngelernte.toFixed(2)} 
+        Bedarf/Kündigung angelernte MA: ${personalDispoAngelernte.toFixed(2)} <br><br>
+        Neuer Lagerbestand Dünger:<br>
+        CHF: ${lagerChfDuengerNeu.toFixed(2)} <br>
+        AUT: ${lagerAutDuengerNeu.toFixed(2)} <br>
+        Poldi: ${lagerPoldiDuengerNeu.toFixed(2)} <br>
+        Neuer Lagerbestand Kleber:<br>
+        CHF: ${lagerChfKleberNeu.toFixed(2)} <br>
+        AUT: ${lagerAutKleberNeu.toFixed(2)} <br>
+        Poldi: ${lagerPoldiKleberNeu.toFixed(2)} <br>
+        Neuer Lagerbestand Waschmittel:<br>
+        CHF: ${lagerChfWaschmNeu.toFixed(2)} <br>
+        AUT: ${lagerAutWaschmNeu.toFixed(2)} <br>
+        Poldi: ${lagerPoldiWaschmNeu.toFixed(2)} <br>
     `;
 }
 
