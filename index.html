@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Eingabeformular für Produktions- und Logistikdaten</h1>
+
+        <!-- Gruppe geplante Produktion -->
+        <h2>Geplante Produktion</h2>
+        <label for="duenger">Dünger (Mio):</label>
+        <input type="text" id="duenger" name="duenger"><br><br>
+
+        <label for="kleber">Kleber (Mio):</label>
+        <input type="text" id="kleber" name="kleber"><br><br>
+
+        <label for="waschmittel">Waschmittel (Mio):</label>
+        <input type="text" id="waschmittel" name="waschmittel"><br><br>
+
+        <!-- Gruppe Rohstoffe -->
+        <h2>Rohstoffe</h2>
+        <label for="rohstoff1">Rohstoff 1:</label>
+        <input type="text" id="rohstoff1" name="rohstoff1"><br><br>
+
+        <label for="rohstoff2">Rohstoff 2:</label>
+        <input type="text" id="rohstoff2" name="rohstoff2"><br><br>
+
+        <!-- Gruppe Endbestand Dünger -->
+        <h2>Endbestand Dünger</h2>
+        <label for="deu_duenger">In DEU:</label>
+        <input type="text" id="deu_duenger" name="deu_duenger"><br><br>
+
+        <label for="chf_duenger">In CHF:</label>
+        <input type="text" id="chf_duenger" name="chf_duenger"><br><br>
+
+        <label for="aut_duenger">In AUT:</label>
+        <input type="text" id="aut_duenger" name="aut_duenger"><br><br>
+
+        <label for="poldi_duenger">In Poldi:</label>
+        <input type="text" id="poldi_duenger" name="poldi_duenger"><br><br>
+
+        <!-- Gruppe Endbestand Kleber -->
+        <h2>Endbestand Kleber</h2>
+        <label for="deu_kleber">In DEU:</label>
+        <input type="text" id="deu_kleber" name="deu_kleber"><br><br>
+
+        <label for="chf_kleber">In CHF:</label>
+        <input type="text" id="chf_kleber" name="chf_kleber"><br><br>
+
+        <label for="aut_kleber">In AUT:</label>
+        <input type="text" id="aut_kleber" name="aut_kleber"><br><br>
+
+        <label for="poldi_kleber">In Poldi:</label>
+        <input type="text" id="poldi_kleber" name="poldi_kleber"><br><br>
+
+        <!-- Gruppe Endbestand Waschmittel -->
+        <h2>Endbestand Waschmittel</h2>
+        <label for="deu_waschmittel">In DEU:</label>
+        <input type="text" id="deu_waschmittel" name="deu_waschmittel"><br><br>
+
+        <label for="chf_waschmittel">In CHF:</label>
+        <input type="text" id="chf_waschmittel" name="chf_waschmittel"><br><br>
+
+        <label for="aut_waschmittel">In AUT:</label>
+        <input type="text" id="aut_waschmittel" name="aut_waschmittel"><br><br>
+
+        <label for="poldi_waschmittel">In Poldi:</label>
+        <input type="text" id="poldi_waschmittel" name="poldi_waschmittel"><br><br>
+
+        <!-- Gruppe Produktionskoeffizient Masch.-Kap. je Produkt in der nächsten Periode für Dünger -->
+        <h2>Produktionskoeffizient für Dünger</h2>
+        <label for="art1_duenger">Art 1:</label>
+        <input type="text" id="art1_duenger" name="art1_duenger"><br><br>
+
+        <label for="art2_duenger">Art 2:</label>
+        <input type="text" id="art2_duenger" name="art2_duenger"><br><br>
+
+        <label for="art3_duenger">Art 3:</label>
+        <input type="text" id="art3_duenger" name="art3_duenger"><br><br>
+
+        <!-- Gruppe Produktionskoeffizient Masch.-Kap. je Produkt in der nächsten Periode für Kleber -->
+        <h2>Produktionskoeffizient für Kleber</h2>
+        <label for="art1_kleber">Art 1:</label>
+        <input type="text" id="art1_kleber" name="art1_kleber"><br><br>
+
+        <label for="art2_kleber">Art 2:</label>
+        <input type="text" id="art2_kleber" name="art2_kleber"><br><br>
+
+        <label for="art3_kleber">Art 3:</label>
+        <input type="text" id="art3_kleber" name="art3_kleber"><br><br>
+
+        <!-- Gruppe Produktionskoeffizient Masch.-Kap. je Produkt in der nächsten Periode für Waschmittel -->
+        <h2>Produktionskoeffizient für Waschmittel</h2>
+        <label for="art1_waschmittel">Art 1:</label>
+        <input type="text" id="art1_waschmittel" name="art1_waschmittel"><br><br>
+
+        <label for="art2_waschmittel">Art 2:</label>
+        <input type="text" id="art2_waschmittel" name="art2_waschmittel"><br><br>
+
+        <label for="art3_waschmittel">Art 3:</label>
+        <input type="text" id="art3_waschmittel" name="art3_waschmittel"><br><br>
+
+        <!-- Gruppe Verbrauchskoeffizient für Dünger -->
+        <h2>Verbrauchskoeffizient für Dünger</h2>
+        <label for="typ1_duenger">Typ 1:</label>
+        <input type="text" id="typ1_duenger" name="typ1_duenger"><br><br>
+
+        <label for="typ2_duenger">Typ 2:</label>
+        <input type="text" id="typ2_duenger" name="typ2_duenger"><br><br>
+
+        <!-- Gruppe Verbrauchskoeffizient für Kleber -->
+        <h2>Verbrauchskoeffizient für Kleber</h2>
+        <label for="typ1_kleber">Typ 1:</label>
+        <input type="text" id="typ1_kleber" name="typ1_kleber"><br><br>
+
+        <label for="typ2_kleber">Typ 2:</label>
+        <input type="text" id="typ2_kleber" name="typ2_kleber"><br><br>
+
+        <!-- Gruppe Verbrauchskoeffizient für Waschmittel -->
+        <h2>Verbrauchskoeffizient für Waschmittel</h2>
+        <label for="typ1_waschmittel">Typ 1:</label>
+        <input type="text" id="typ1_waschmittel" name="typ1_waschmittel"><br><br>
+
+        <label for="typ2_waschmittel">Typ 2:</label>
+        <input type="text" id="typ2_waschmittel" name="typ2_waschmittel"><br><br>
+
+        <!-- Gruppe Personal -->
+        <h2>Personal Endbestand abgelaufene Periode</h2>
+        <label for="fachkraefte">Fachkräfte:</label>
+        <input type="text" id="fachkraefte" name="fachkraefte"><br><br>
+
+        <label for="angelernte">Angelernte MA:</label>
+        <input type="text" id="angelernte" name="angelernte"><br><br>
+
+        <label for="sozialleistung">Sozialleistung (%):</label>
+        <input type="text" id="sozialleistung" name="sozialleistung"><br><br>
+
+        <!-- Gruppe Transport Nach AUT -->
+        <h2>Transport nach AUT</h2>
+        <label for="transport_aut_duenger">Dünger:</label>
+        <input type="text" id="transport_aut_duenger" name="transport_aut_duenger"><br><br>
+
+        <label for="transport_aut_kleber">Kleber:</label>
+        <input type="text" id="transport_aut_kleber" name="transport_aut_kleber"><br><br>
+
+        <label for="transport_aut_waschmittel">Waschmittel:</label>
+        <input type="text" id="transport_aut_waschmittel" name="transport_aut_waschmittel"><br><br>
+
+        <!-- Gruppe Transport Nach CHF -->
+        <h2>Transport nach CHF</h2>
+        <label for="transport_chf_duenger">Dünger:</label>
+        <input type="text" id="transport_chf_duenger" name="transport_chf_duenger"><br><br>
+
+        <label for="transport_chf_kleber">Kleber:</label>
+        <input type="text" id="transport_chf_kleber" name="transport_chf_kleber"><br><br>
+
+        <label for="transport_chf_waschmittel">Waschmittel:</label>
+        <input type="text" id="transport_chf_waschmittel" name="transport_chf_waschmittel"><br><br>
+
+        <!-- Gruppe Transport Nach Poldi -->
+        <h2>Transport nach Poldi</h2>
+        <label for="transport_poldi_duenger">Dünger:</label>
+        <input type="text" id="transport_poldi_duenger" name="transport_poldi_duenger"><br><br>
+
+        <label for="transport_poldi_kleber">Kleber:</label>
+        <input type="text" id="transport_poldi_kleber" name="transport_poldi_kleber"><br><br>
+
+        <label for="transport_poldi_waschmittel">Waschmittel:</label>
+        <input type="text" id="transport_poldi_waschmittel" name="transport_poldi_waschmittel"><br><br>
+
+        <!-- Gruppe verfügbare Maschinen -->
+        <h2>Verfügbare Maschinen</h2>
+        <label for="art1_maschinen">Art 1:</label>
+        <input type="text" id="art1_maschinen" name="art1_maschinen"><br><br>
+
+        <label for="art2_maschinen">Art 2:</label>
+        <input type="text" id="art2_maschinen" name="art2_maschinen"><br><br>
+
+        <label for="art3_maschinen">Art 3:</label>
+        <input type="text" id="art3_maschinen" name="art3_maschinen"><br><br>
+
+        <button class="submit" id="submit" onclick="onClick()">Make things happen</button>
+        <p class="outputText"></p> 
+
+</body>
+<script src="app.js"></script>
+</html>
