@@ -167,6 +167,7 @@ function onClick() {
         CHF: ${lagerChfWaschmNeu.toFixed(2)} <br>
         AUT: ${lagerAutWaschmNeu.toFixed(2)} <br>
         Poldi: ${lagerPoldiWaschmNeu.toFixed(2)} <br>
+        <b>Es ist zu empfehlen, mindestens den fehlenden Lagerbestand auszugleichen</b>
     `;
 }
 
